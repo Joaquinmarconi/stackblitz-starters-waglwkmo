@@ -1,0 +1,29 @@
+<section class="task-container">
+  <h2>Mi Lista de Tareas</h2>
+
+  <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="task-form">
+    <input type="text" formControlName="title" placeholder="¿Qué necesitas hacer?">
+    <button type="submit" [disabled]="taskForm.invalid">Añadir Tarea</button>
+
+    @if (taskForm.get('title')?.invalid && (taskForm.get('title')?.dirty || taskForm.get('title')?.touched)) {
+      <div class="error-message">
+        @if (taskForm.get('title')?.errors?.['required']) {
+          El título es requerido.
+        }
+        @if (taskForm.get('title')?.errors?.['minlength']) {
+          El título debe tener al menos 3 caracteres.
+        }
+      </div>
+    }
+  </form>
+
+  <div class="task-list">
+    @if (tasks.length > 0) {
+      @for (task of tasks; track task.id) {
+        <app-task-item [task]="task" (deleted)="handleDelete($event)"></app-task-item>
+      }
+    } @else {
+      <p class="no-tasks">No tenés tareas pendientes.</p>
+    }
+  </div>
+</section>

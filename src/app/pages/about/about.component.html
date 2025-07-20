@@ -1,0 +1,34 @@
+<div class="about-container">
+  <h2>Acerca de Mi Aplicación de Tareas</h2>
+  <p>
+    Lista de tareas que desarrollé para el
+    Trabajo Práctico Final del Seminario de Angular 2025.
+  </p>
+  <p>
+    El objetivo era aplicar los conceptos fundamentales del framework para construir
+    una Single Page Application (SPA) funcional.
+  </p>
+
+  <h3>Funcionalidades y Conceptos Implementados:</h3>
+  <ul>
+    <li>
+      <strong>Ruteo:</strong> La aplicación tiene dos rutas, '/tareas' y '/acerca-de', que cargan componentes diferentes.
+    </li>
+    <li>
+      <strong>Componentes:</strong> La lista de tareas usa un componente padre ('TaskList') que se comunica con componentes hijos ('TaskItem') mediante &#64;Input y &#64;Output para pasar datos y eventos.
+    </li>
+    <li>
+      <strong>Tipado:</strong> Se utilizó una Interfaz ('Task') para asegurar la consistencia de los datos en toda la aplicación.
+    </li>
+    <li>
+      <strong>Control de Flujo:</strong> Las plantillas usan &#64;for para renderizar la lista de tareas y &#64;if para mostrar contenido condicional.
+    </li>
+    <li>
+      <strong>Consumo de API:</strong> Se creó un servicio ('TaskService') que utiliza 'HttpClient' para realizar peticiones GET, POST y DELETE a una API externa de MockAPI.
+    </li>
+    <li>
+      <strong>Formularios Reactivos:</strong> El formulario para añadir tareas es un Formulario Reactivo (`Reactive Form`) que incluye validaciones de campos (requerido y longitud mínima).
+    </li>
+  </ul>
+
+</div>

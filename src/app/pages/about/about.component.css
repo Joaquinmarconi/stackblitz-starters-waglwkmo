@@ -1,0 +1,29 @@
+.about-container {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1.2em;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+hr {
+  margin: 2rem 0;
+}
